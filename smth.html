@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="theme-color" content="#f2f3e8">
+	<title>Loop Lab | Make something new</title>
+	<link rel="stylesheet" href="smth.css">
+	<script src="smth.js" defer></script>
+</head>
+<body>
+	<header class="site-header">
+		<a class="brand" href="#top" aria-label="Loop Lab home">
+			<span class="brand-mark" aria-hidden="true">↻</span>
+			<span>loop lab</span>
+		</a>
+		<nav aria-label="Main navigation">
+			<a href="#projects">Explore projects</a>
+			<a href="#how-it-works">How it works</a>
+		</nav>
+		<a class="header-cta" href="#projects">Find a project <span aria-hidden="true">↗</span></a>
+	</header>
+
+	<main id="top">
+		<section class="intro" aria-labelledby="page-title">
+			<div class="intro-copy">
+				<p class="eyebrow"><span class="eyebrow-dot"></span> THE STUDENT MAKER SPACE</p>
+				<h1 id="page-title">Old stuff.<br><span>New possibilities.</span></h1>
+				<p class="intro-text">Turn everyday throwaways into toys, games, and useful things. Pick an idea, gather your bits, and make it your own.</p>
+				<a class="text-link" href="#projects">See what you can make <span aria-hidden="true">↓</span></a>
+			</div>
+			<div class="intro-art" aria-label="A toy robot made from reused boxes and bottle caps" role="img">
+				<div class="sun-disc"></div>
+				<span class="orbit orbit-one"></span>
+				<span class="orbit orbit-two"></span>
+				<div class="robot" aria-hidden="true">
+					<span class="robot-antenna"></span>
+					<span class="robot-head"><i></i><i></i><b></b></span>
+					<span class="robot-neck"></span>
+					<span class="robot-body"><i></i><b>★</b><i></i></span>
+					<span class="robot-arm left"></span>
+					<span class="robot-arm right"></span>
+					<span class="robot-leg left"></span>
+					<span class="robot-leg right"></span>
+				</div>
+				<span class="art-label label-one">CARDBOARD</span>
+				<span class="art-label label-two">BOTTLE CAPS</span>
+				<span class="spark spark-one">✳</span>
+				<span class="spark spark-two">✳</span>
+			</div>
+		</section>
+
+		<section class="finder" id="materials-finder" aria-labelledby="finder-title" hidden>
+			<div class="finder-heading">
+				<div>
+					<p class="eyebrow">THE SCRAP PILE SCANNER</p>
+					<h2 id="finder-title">What do you have?</h2>
+				</div>
+				<p>Tap + or − for what you have. We’ll show projects you can make.</p>
+			</div>
+			<div class="finder-layout">
+				<div class="inventory-panel">
+					<div class="inventory-panel-heading">
+						<h3>Your materials</h3>
+						<button class="clear-inventory" id="clear-inventory" type="button">Clear counts</button>
+					</div>
+					<div class="inventory-list" id="inventory-list"></div>
+					<p class="inventory-note">Amounts count reusable materials. Check each project guide for other supplies like glue or seeds.</p>
+				</div>
+				<div class="recommendation-panel" aria-live="polite">
+					<p class="eyebrow">YOUR PROJECT MATCHES</p>
+					<h3 id="recommendation-title">Start with your materials</h3>
+					<div class="recommendation-list" id="recommendation-list">
+						<p class="recommendation-empty">Add a quantity to see what you can make.</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="library" id="projects" aria-labelledby="projects-title">
+			<div class="section-heading">
+				<div class="project-heading-copy">
+					<p class="eyebrow">THE IDEA SHELF</p>
+					<h2 id="projects-title">What will you make?</h2>
+				</div>
+				<div class="project-header-actions">
+					<button class="materials-toggle" id="toggle-materials" type="button" aria-expanded="false" aria-controls="materials-finder">
+						<span class="materials-toggle-icon" aria-hidden="true">＋</span> My materials
+					</button>
+					<p class="project-count"><span id="result-count">0</span> projects to explore</p>
+				</div>
+			</div>
+
+			<div class="browse-tools">
+				<label class="search-field">
+					<span class="search-icon" aria-hidden="true">⌕</span>
+					<span class="sr-only">Search projects</span>
+					<input id="search-input" type="search" placeholder="Try “cardboard” or “game”" autocomplete="off">
+					<kbd>/</kbd>
+				</label>
+				<div class="filters" role="group" aria-label="Filter projects by material">
+					<button class="filter-btn active" type="button" data-filter="all" aria-pressed="true">All ideas</button>
+					<button class="filter-btn" type="button" data-filter="cardboard" aria-pressed="false">Paper &amp; boxes</button>
+					<button class="filter-btn" type="button" data-filter="containers" aria-pressed="false">Bottles &amp; tubs</button>
+					<button class="filter-btn" type="button" data-filter="fabric" aria-pressed="false">Fabric &amp; bits</button>
+				</div>
+			</div>
+
+			<div class="project-grid" id="project-grid" aria-live="polite"></div>
+			<p class="empty-state" id="empty-state" hidden>No projects match that search yet. Try another word or material.</p>
+		</section>
+
+		<section class="maker-note" id="how-it-works" aria-labelledby="note-title">
+			<div class="note-stamp" aria-hidden="true">MAKE<br>+ PLAY</div>
+			<div>
+				<p class="eyebrow">A NOTE FOR MAKERS</p>
+				<h2 id="note-title">Your best tool is curiosity.</h2>
+				<p>These ideas are starting points, not rules. Change the colors, invent a new game, or combine two projects. Ask an adult to help with scissors, glue guns, or anything sharp.</p>
+			</div>
+			<a href="#projects" class="note-link" aria-label="Back to project ideas">↑</a>
+		</section>
+	</main>
+
+	<footer class="site-footer">
+		<a class="brand footer-brand" href="#top"><span class="brand-mark" aria-hidden="true">↻</span><span>loop lab</span></a>
+		<p>Make more. Waste less. Have fun.</p>
+		<span class="footer-year">A little creativity goes a long way.</span>
+	</footer>
+
+	<dialog class="project-dialog" id="project-dialog" aria-labelledby="dialog-title">
+		<button class="dialog-close" id="dialog-close" type="button" aria-label="Close project">×</button>
+		<div class="dialog-art" id="dialog-art" aria-hidden="true"></div>
+		<div class="dialog-body">
+			<div class="dialog-meta"><span id="dialog-material"></span><span id="dialog-time"></span></div>
+			<h2 id="dialog-title"></h2>
+			<p class="dialog-summary" id="dialog-summary"></p>
+			<div class="finished-look">
+				<p class="finished-look-label">WHAT YOU’RE MAKING</p>
+				<p id="dialog-finish"></p>
+			</div>
+			<h3 class="materials-heading">Gather your materials</h3>
+			<ul class="materials-list" id="dialog-materials"></ul>
+			<div class="guide-heading">
+				<h3>Make it, step by step</h3>
+				<p id="step-progress" aria-live="polite"></p>
+			</div>
+			<div class="step-slide" aria-live="polite">
+				<div class="step-picture" id="step-picture" aria-hidden="true"></div>
+				<p class="step-instruction" id="step-instruction"></p>
+			</div>
+			<div class="step-navigation">
+				<button class="step-nav-button" id="step-previous" type="button">← Previous</button>
+				<div class="step-dots" id="step-dots" aria-label="Project steps"></div>
+				<button class="step-nav-button next-step" id="step-next" type="button">Next step →</button>
+			</div>
+			<p class="safety-note"><span aria-hidden="true">✳</span> Ask an adult for help with cutting, hot glue, or small parts.</p>
+		</div>
+	</dialog>
+</body>
+</html>
